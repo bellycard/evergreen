@@ -3,6 +3,7 @@
 <script type="text/javascript" src="<%= url("/resources/json2.js") %>"></script>
 <script type="text/javascript" src="<%= url("/resources/run.js") %>"></script>
 <script type="text/javascript">
+  <%= "spec_name = '#{@spec.name};'" if @spec %>
   <%= render_spec(@coffee_spec_helper) if @coffee_spec_helper.exist? %>;
   <%= render_spec(@js_spec_helper) if @js_spec_helper.exist? %>;
 </script>

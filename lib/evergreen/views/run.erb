@@ -6,10 +6,9 @@
   <%= render_spec(@coffee_spec_helper) if @coffee_spec_helper.exist? %>;
   <%= render_spec(@js_spec_helper) if @js_spec_helper.exist? %>;
 </script>
-<h2>HELLO</h2>
+
 <script type="text/javascript">
   <% if @spec %>
-    <%= @spec.inspect %>
     <%= render_spec(@spec) %>
   <% else %>
     <% @suite.specs.each do |spec| %>
